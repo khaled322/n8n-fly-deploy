@@ -1,0 +1,12 @@
+app = "my-n8n-app" # غيّر الاسم إذا تريد اسم آخر
+
+[build]
+  image = "n8nio/n8n:latest"
+
+[env]
+  # اتركها فارغة هنا، سنضيف المتغيرات من لوحة Fly لاحقًا
+  # مثال: N8N_HOST = "my-n8n-app.fly.dev"
+
+[[mounts]]
+  source = "n8n-data"
+  destination = "/home/node/.n8n"
